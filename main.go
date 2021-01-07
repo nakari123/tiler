@@ -10,6 +10,7 @@ import (
 	"path"
 	"image/jpeg"
 	"image/png"
+	 "math"
 )
 
 var (
@@ -55,7 +56,7 @@ func main() {
 	}
 
 	nColumns := width/ *tileSize
-	nRows := height/ *tileSize
+	nRows := int(math.Ceil(float64(height) / float64(*tileSize)))
 
 	var fileName string
 
